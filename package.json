@@ -73,7 +73,7 @@
     "jszip": "^3.10.1",
     "lodash-es": "^4.17.21",
     "reinarpg-data": "3.65.0",
-    "minecraft-protocol": "github:reinarpg/reinarpg-protocol#master",
+    "reinarpg-protocol": "github:reinarpg/reinarpg-protocol#master",
     "map-downloader": "github:reinarpg/map-downloader",
     "mojangson": "^2.0.4",
     "net-browserify": "github:reinarpg/net-browserify",
@@ -174,7 +174,7 @@
       "reinarpg-world": "github:reinarpg/reinarpg-world",
       "reinarpg-data": "github:reinarpg/reinarpg-data",
       "reinarpg-anvil": "github:reinarpg/reinarpg-anvil",
-      "minecraft-protocol": "github:reinarpg/reinarpg-protocol",
+      "reinarpg-protocol": "github:reinarpg/reinarpg-protocol",
       "react": "^18.2.0",
       "reinarpg-chunk": "github:reinarpg/reinarpg-chunk"
     },
@@ -182,7 +182,7 @@
       "ignoreDependencies": []
     },
     "patchedDependencies": {
-      "minecraft-protocol@1.47.0": "patches/minecraft-protocol@1.47.0.patch",
+      "reinarpg-protocol@1.47.0": "patches/reinarpg-protocol@1.47.0.patch",
       "three@0.154.0": "patches/three@0.154.0.patch",
       "pixelarticons@1.8.1": "patches/pixelarticons@1.8.1.patch",
       "map-downloader@1.2.0": "patches/map-downloader@1.2.0.patch"

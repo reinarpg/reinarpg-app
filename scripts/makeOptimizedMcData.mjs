@@ -9,7 +9,7 @@ import fs from 'fs'
 import  {default as _JsonOptimizer}  from '../src/optimizeJson'
 import { gzipSync } from 'zlib';
 import MinecraftData from 'reinarpg-data'
-import MCProtocol from 'minecraft-protocol'
+import MCProtocol from 'reinarpg-protocol'
 
 /** @type {typeof _JsonOptimizer} */
 //@ts-ignore

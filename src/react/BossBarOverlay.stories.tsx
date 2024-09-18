@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
-import { ChatMessage } from 'prismarine-chat'
+import { ChatMessage } from 'reinarpg-chat'
 import { BossBar } from 'reinarpg-bot'
 import BossBarOverlay from './BossBarOverlay'
 

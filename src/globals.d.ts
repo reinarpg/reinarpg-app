@@ -5,7 +5,7 @@ declare const bot: Omit<import('reinarpg-bot').Bot, 'world' | '_client'> & {
   world: Omit<import('reinarpg-world').world.WorldSync, 'getBlock'> & {
     getBlock: (pos: import('vec3').Vec3) => import('reinarpg-block').Block | null
   }
-  _client: Omit<import('minecraft-protocol').Client, 'on'> & {
+  _client: Omit<import('reinarpg-protocol').Client, 'on'> & {
     write: typeof import('./generatedClientPackets').clientWrite
     on: typeof import('./generatedServerPackets').clientOn
   }

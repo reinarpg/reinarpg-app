@@ -25,10 +25,10 @@ export const appAndRendererSharedConfig = () => defineConfig({
             http: 'http-browserify',
             stream: 'stream-browserify',
             net: 'net-browserify',
-            'minecraft-protocol$': 'minecraft-protocol/src/index.js',
+            'reinarpg-protocol$': 'reinarpg-protocol/src/index.js',
             'buffer$': 'buffer',
             // avoid bundling, not used on client side
-            'prismarine-auth': path.join(__dirname, `../src/shims/prismarineAuthReplacement.ts`),
+            'reinarpg-auth': path.join(__dirname, `../src/shims/prismarineAuthReplacement.ts`),
             perf_hooks: path.join(__dirname, `../src/shims/perf_hooks_replacement.js`),
             crypto: path.join(__dirname, `../src/shims/crypto.js`),
             dns: path.join(__dirname, `../src/shims/dns.js`),

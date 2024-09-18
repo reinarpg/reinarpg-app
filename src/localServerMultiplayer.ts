@@ -1,6 +1,6 @@
 import { Duplex } from 'stream'
 import Peer, { DataConnection } from 'peerjs'
-import Client from 'minecraft-protocol/src/client'
+import Client from 'reinarpg-protocol/src/client'
 import { resolveTimeout, setLoadingScreenStatus } from './utils'
 import { miscUiState } from './globalState'
 

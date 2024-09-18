@@ -111,7 +111,7 @@ diff --git a/src/index.d.ts b/src/index.d.ts
 index 0a5821c32d735e11205a280aa5a503c13533dc14..94a49f661d922478b940d853169b6087e6ec3df5 100644
 --- a/src/index.d.ts
 +++ b/src/index.d.ts
-@@ -121,6 +121,7 @@ declare module 'minecraft-protocol' {
+@@ -121,6 +121,7 @@ declare module 'reinarpg-protocol' {
  		sessionServer?: string
  		keepAlive?: boolean
  		closeTimeout?: number
@@ -119,7 +119,7 @@ index 0a5821c32d735e11205a280aa5a503c13533dc14..94a49f661d922478b940d853169b6087
  		noPongTimeout?: number
  		checkTimeoutInterval?: number
  		version?: string
-@@ -141,6 +142,8 @@ declare module 'minecraft-protocol' {
+@@ -141,6 +142,8 @@ declare module 'reinarpg-protocol' {
  		disableChatSigning?: boolean
  		/** Pass custom client implementation if needed. */
  		Client?: Client

@@ -3,7 +3,7 @@ import UUID from 'uuid-1345'
 import { fsState } from './loadSave'
 
 
-// https://github.com/PrismarineJS/node-minecraft-protocol/blob/cf1f67117d586b5e6e21f0d9602da12e9fcf46b6/src/server/login.js#L170
+// https://github.com/PrismarineJS/node-reinarpg-protocol/blob/cf1f67117d586b5e6e21f0d9602da12e9fcf46b6/src/server/login.js#L170
 function javaUUID (s: string) {
   const hash = crypto.createHash('md5')
   hash.update(s, 'utf8')

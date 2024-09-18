@@ -1500,4 +1500,4 @@ type ClientOnMcProtocolEvents = ClientOnMap & {
   state: any
 }
 
-export declare const clientOn: <T extends keyof ClientOnMcProtocolEvents>(name: T, callback: (data: ClientOnMcProtocolEvents[T], packetMeta: import('minecraft-protocol').PacketMeta) => void) => void
+export declare const clientOn: <T extends keyof ClientOnMcProtocolEvents>(name: T, callback: (data: ClientOnMcProtocolEvents[T], packetMeta: import('reinarpg-protocol').PacketMeta) => void) => void

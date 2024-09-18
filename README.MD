@@ -178,8 +178,8 @@ General:
 - [Mineflayer](https://github.com/reinarpg/reinarpg-bot) - Handles all client-side communications with the server (including the builtin one) - forked
 - [Forked Flying Squid (Space Squid)](https://github.com/zardoy/space-squid) - The builtin offline server that makes single player & P2P possible!
 - [Prismarine Provider Anvil](https://github.com/reinarpg/reinarpg-anvil) - Handles world loading (region format)
-- [Prismarine Physics](https://github.com/PrismarineJS/prismarine-physics) - Does all the physics calculations
-- [Minecraft Protocol](https://github.com/PrismarineJS/node-minecraft-protocol) - Makes connections to servers possible
+- [Prismarine Physics](https://github.com/PrismarineJS/reinarpg-physics) - Does all the physics calculations
+- [Minecraft Protocol](https://github.com/PrismarineJS/node-reinarpg-protocol) - Makes connections to servers possible
 - [Peer.js](https://peerjs.com/) - P2P networking (when you open to wan)
 - [Three.js](https://threejs.org/) - Helping in 3D rendering
 

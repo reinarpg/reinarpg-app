@@ -1,5 +1,5 @@
 import { fromFormattedString, render, RenderNode, TextComponent } from '@xmcl/text-component'
-import type { ChatMessage } from 'prismarine-chat'
+import type { ChatMessage } from 'reinarpg-chat'
 
 type SignBlockEntity = {
   Color?: string

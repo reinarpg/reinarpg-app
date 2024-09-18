@@ -2,8 +2,8 @@ import { options } from './optionsStorage'
 
 //@ts-check
 const { EventEmitter } = require('events')
-const debug = require('debug')('minecraft-protocol')
-const states = require('minecraft-protocol/src/states')
+const debug = require('debug')('reinarpg-protocol')
+const states = require('reinarpg-protocol/src/states')
 
 window.serverDataChannel ??= {}
 export const customCommunication = {

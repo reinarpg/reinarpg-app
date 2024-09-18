@@ -1,4 +1,4 @@
-import PrismarineChatLoader from 'prismarine-chat'
+import PrismarineChatLoader from 'reinarpg-chat'
 import { renderSign } from '.'
 
 const PrismarineChat = PrismarineChatLoader({ language: {} } as any)

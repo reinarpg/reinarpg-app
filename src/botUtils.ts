@@ -29,7 +29,7 @@ type MessageInput = {
 
 const global = globalThis as any
 
-// todo move to sign-renderer, replace with prismarine-chat, fix mcData issue!
+// todo move to sign-renderer, replace with reinarpg-chat, fix mcData issue!
 export const formatMessage = (message: MessageInput, mcData: IndexedData = global.loadedData) => {
   let msglist: MessageFormatPart[] = []
 

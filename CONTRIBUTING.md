@@ -57,7 +57,7 @@ Path of all Storybook stories is `src/react/**/*.stories.tsx`.
 
 How different modules are used:
 
-- `reinarpg-bot` - provider `bot` variable and as reinarpg-bot states it is a wrapper for the `node-minecraft-protocol` module and is used to connect and interact with real Java Minecraft servers. However not all events & properties are exposed and sometimes you have to use `bot._client.on('packet_name', data => ...)` to handle packets that are not handled via reinarpg-bot API. Also you can use almost any reinarpg-bot plugin.
+- `reinarpg-bot` - provider `bot` variable and as reinarpg-bot states it is a wrapper for the `node-reinarpg-protocol` module and is used to connect and interact with real Java Minecraft servers. However not all events & properties are exposed and sometimes you have to use `bot._client.on('packet_name', data => ...)` to handle packets that are not handled via reinarpg-bot API. Also you can use almost any reinarpg-bot plugin.
 
 ## Running Main App + Playground
 
