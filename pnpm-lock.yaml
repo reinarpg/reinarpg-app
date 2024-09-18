@@ -6,24 +6,24 @@ settings:
 
 overrides:
   buffer: ^6.0.3
-  '@nxg-org/mineflayer-physics-util': 1.5.8
+  '@nxg-org/reinarpg-bot-physics-util': 1.5.8
   three: 0.154.0
   diamond-square: github:zardoy/diamond-square
-  prismarine-block: github:zardoy/prismarine-block#next-era
-  prismarine-world: github:zardoy/prismarine-world#next-era
+  reinarpg-block: github:zardoy/reinarpg-block#next-era
+  reinarpg-world: github:zardoy/reinarpg-world#next-era
   minecraft-data: 3.65.0
-  prismarine-provider-anvil: github:zardoy/prismarine-provider-anvil#everything
+  reinarpg-anvil: github:zardoy/reinarpg-anvil#everything
   minecraft-protocol: github:PrismarineJS/node-minecraft-protocol#master
   react: ^18.2.0
-  prismarine-chunk: github:zardoy/prismarine-chunk
+  reinarpg-chunk: github:reinarpg/reinarpg-chunk
 
 patchedDependencies:
   minecraft-protocol@1.47.0:
     hash: 7otpchsbv7hxsuis4rrrwdtbve
     path: patches/minecraft-protocol@1.47.0.patch
-  mineflayer-item-map-downloader@1.2.0:
+  reinarpg-bot-item-map-downloader@1.2.0:
     hash: bck55yjvd4wrgz46x7o4vfur5q
-    path: patches/mineflayer-item-map-downloader@1.2.0.patch
+    path: patches/reinarpg-bot-item-map-downloader@1.2.0.patch
   pixelarticons@1.8.1:
     hash: cclg2qo6d4yjs4evj64nr2mbwa
     path: patches/pixelarticons@1.8.1.patch
@@ -44,10 +44,10 @@ importers:
       '@mui/base':
         specifier: 5.0.0-beta.40
         version: 5.0.0-beta.40(@types/react@18.2.20)(react-dom@18.2.0(react@18.2.0))(react@18.2.0)
-      '@nxg-org/mineflayer-auto-jump':
+      '@nxg-org/reinarpg-bot-auto-jump':
         specifier: ^0.7.12
         version: 0.7.12
-      '@nxg-org/mineflayer-tracker':
+      '@nxg-org/reinarpg-bot-tracker':
         specifier: ^1.2.3
         version: 1.2.3
       '@react-oauth/google':
@@ -137,9 +137,9 @@ importers:
       minecraft-protocol:
         specifier: github:PrismarineJS/node-minecraft-protocol#master
         version: https://codeload.github.com/PrismarineJS/node-minecraft-protocol/tar.gz/7057ad979b416192ada235f2f4e3b5eb26af5fa1(patch_hash=7otpchsbv7hxsuis4rrrwdtbve)(encoding@0.1.13)
-      mineflayer-item-map-downloader:
-        specifier: github:zardoy/mineflayer-item-map-downloader
-        version: https://codeload.github.com/zardoy/mineflayer-item-map-downloader/tar.gz/642fd4f7023a98a96da4caf8f993f8e19361a1e7(patch_hash=bck55yjvd4wrgz46x7o4vfur5q)(encoding@0.1.13)
+      reinarpg-bot-item-map-downloader:
+        specifier: github:zardoy/reinarpg-bot-item-map-downloader
+        version: https://codeload.github.com/zardoy/reinarpg-bot-item-map-downloader/tar.gz/642fd4f7023a98a96da4caf8f993f8e19361a1e7(patch_hash=bck55yjvd4wrgz46x7o4vfur5q)(encoding@0.1.13)
       mojangson:
         specifier: ^2.0.4
         version: 2.0.4
@@ -158,9 +158,9 @@ importers:
       pretty-bytes:
         specifier: ^6.1.1
         version: 6.1.1
-      prismarine-provider-anvil:
-        specifier: github:zardoy/prismarine-provider-anvil#everything
-        version: https://codeload.github.com/zardoy/prismarine-provider-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699(minecraft-data@3.65.0)
+      reinarpg-anvil:
+        specifier: github:zardoy/reinarpg-anvil#everything
+        version: https://codeload.github.com/zardoy/reinarpg-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699(minecraft-data@3.65.0)
       prosemirror-example-setup:
         specifier: ^1.2.2
         version: 1.2.2
@@ -346,10 +346,10 @@ importers:
       minecraft-inventory-gui:
         specifier: github:zardoy/minecraft-inventory-gui#next
         version: https://codeload.github.com/zardoy/minecraft-inventory-gui/tar.gz/75e940a4cd50d89e0ba03db3733d5d704917a3c8(@types/react@18.2.20)(react@18.2.0)
-      mineflayer:
-        specifier: github:zardoy/mineflayer
-        version: https://codeload.github.com/zardoy/mineflayer/tar.gz/c6755fc3758eeb3bbbb98479efe03b7935486247(encoding@0.1.13)
-      mineflayer-pathfinder:
+      reinarpg-bot:
+        specifier: github:zardoy/reinarpg-bot
+        version: https://codeload.github.com/zardoy/reinarpg-bot/tar.gz/c6755fc3758eeb3bbbb98479efe03b7935486247(encoding@0.1.13)
+      reinarpg-bot-pathfinder:
         specifier: ^2.4.4
         version: 2.4.4
       npm-run-all:
@@ -421,12 +421,12 @@ importers:
       minecrafthawkeye:
         specifier: ^1.3.6
         version: 1.3.6
-      prismarine-block:
-        specifier: github:zardoy/prismarine-block#next-era
-        version: https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
-      prismarine-chunk:
-        specifier: github:zardoy/prismarine-chunk
-        version: https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
+      reinarpg-block:
+        specifier: github:zardoy/reinarpg-block#next-era
+        version: https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
+      reinarpg-chunk:
+        specifier: github:reinarpg/reinarpg-chunk
+        version: https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
       prismarine-schematic:
         specifier: ^1.2.0
         version: 1.2.3
@@ -2110,19 +2110,19 @@ packages:
     engines: {node: ^12.13.0 || ^14.15.0 || >=16.0.0}
     deprecated: This functionality has been moved to @npmcli/fs
 
-  '@nxg-org/mineflayer-auto-jump@0.7.12':
+  '@nxg-org/reinarpg-bot-auto-jump@0.7.12':
     resolution: {integrity: sha512-F5vX/lerlWx/5HVlkDNbvrtQ19PL6iG8i4ItPTIRtjGiFzusDefP7DI226zSFR8Wlaw45qHv0jn814p/4/qVdQ==}
 
-  '@nxg-org/mineflayer-physics-util@1.5.8':
+  '@nxg-org/reinarpg-bot-physics-util@1.5.8':
     resolution: {integrity: sha512-KmCkAqpUo8BbuRdIBs6+V2hWHehz++PRz3lRwIsb47CuG0u4sgLYh37RY3ifAznC6uWvmPK+q3B4ZXwJzPy1MQ==}
 
-  '@nxg-org/mineflayer-tracker@1.2.3':
+  '@nxg-org/reinarpg-bot-tracker@1.2.3':
     resolution: {integrity: sha512-E7Ik/scU117Rr6kQUHHMBk8qOGh63YlTCGN33jMfeP7L8xmLeSHN3JtV/fbog8Y+R+HgO99yfZiRAaV7z1T6gQ==}
 
-  '@nxg-org/mineflayer-trajectories@1.1.1':
+  '@nxg-org/reinarpg-bot-trajectories@1.1.1':
     resolution: {integrity: sha512-X103KXlX8+L3uMeK4jQxMUdTizv01sQRSfBizAF/iOAdfQZehRLXr3CYKeJzfwPYGLN0X0JCl++cMEcZVn4vbg==}
 
-  '@nxg-org/mineflayer-util-plugin@1.8.3':
+  '@nxg-org/reinarpg-bot-util-plugin@1.8.3':
     resolution: {integrity: sha512-YlIbzCDs9822xuvmYlD0vXZz0iye9buqp9NK4nNn15gYybdqBtC/YxK6BLqXtwNohZCKoZdKgei7Xd5Bt2/rUg==}
 
   '@pkgjs/parseargs@0.11.0':
@@ -6767,19 +6767,19 @@ packages:
   minecrafthawkeye@1.3.6:
     resolution: {integrity: sha512-SlRlorxQs6nNzMiiIQ5z47wzbAI27UaCdbRB82CE8jqj4C8m3Gqk5TlgN+PSThxx8EDPXySzd8Vk+/wNigAd5A==}
 
-  mineflayer-item-map-downloader@https://codeload.github.com/zardoy/mineflayer-item-map-downloader/tar.gz/642fd4f7023a98a96da4caf8f993f8e19361a1e7:
-    resolution: {tarball: https://codeload.github.com/zardoy/mineflayer-item-map-downloader/tar.gz/642fd4f7023a98a96da4caf8f993f8e19361a1e7}
+  reinarpg-bot-item-map-downloader@https://codeload.github.com/zardoy/reinarpg-bot-item-map-downloader/tar.gz/642fd4f7023a98a96da4caf8f993f8e19361a1e7:
+    resolution: {tarball: https://codeload.github.com/zardoy/reinarpg-bot-item-map-downloader/tar.gz/642fd4f7023a98a96da4caf8f993f8e19361a1e7}
     version: 1.2.0
 
-  mineflayer-pathfinder@2.4.4:
+  reinarpg-bot-pathfinder@2.4.4:
     resolution: {integrity: sha512-HAXakZrJRb1UC+5dv8EaDrqjW3ZnBnBk3nkb6x/YWyhHCUKn/E7VU0FO+UN9whuqPlkSaVumEdXJdydE6lSYxQ==}
 
-  mineflayer@4.20.1:
+  reinarpg-bot@4.20.1:
     resolution: {integrity: sha512-QMMNPx4IyZE7ydAzjvGLQLCnQNUOfkk1qVZKxTTS9q3qPTAewz4GhsVUBtbQ8LSbHthe5RcQ1Sgxs4wlIma/Qw==}
     engines: {node: '>=18'}
 
-  mineflayer@https://codeload.github.com/zardoy/mineflayer/tar.gz/c6755fc3758eeb3bbbb98479efe03b7935486247:
-    resolution: {tarball: https://codeload.github.com/zardoy/mineflayer/tar.gz/c6755fc3758eeb3bbbb98479efe03b7935486247}
+  reinarpg-bot@https://codeload.github.com/zardoy/reinarpg-bot/tar.gz/c6755fc3758eeb3bbbb98479efe03b7935486247:
+    resolution: {tarball: https://codeload.github.com/zardoy/reinarpg-bot/tar.gz/c6755fc3758eeb3bbbb98479efe03b7935486247}
     version: 4.20.1
     engines: {node: '>=18'}
 
@@ -7487,22 +7487,22 @@ packages:
       minecraft-data: 3.65.0
       prismarine-registry: ^1.1.0
 
-  prismarine-block@https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819:
-    resolution: {tarball: https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819}
+  reinarpg-block@https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819:
+    resolution: {tarball: https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819}
     version: 1.17.1
 
   prismarine-chat@1.10.1:
     resolution: {integrity: sha512-XukYcuueuhDxzEXG7r8BZyt6jOObrPPB4JESCgb+/XenB9nExoSHF8eTQWWj8faKPLqm1dRQaYwFJlNBlJZJUw==}
 
-  prismarine-chunk@https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef:
-    resolution: {tarball: https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef}
+  reinarpg-chunk@https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef:
+    resolution: {tarball: https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef}
     version: 1.35.0
     engines: {node: '>=14'}
 
-  prismarine-entity@2.3.1:
+  reinarpg-entity@2.3.1:
     resolution: {integrity: sha512-HOv8l7IetHNf4hwZ7V/W4vM3GNl+e6VCtKDkH9h02TRq7jWngsggKtJV+VanCce/sNwtJUhJDjORGs728ep4MA==}
 
-  prismarine-item@1.14.0:
+  reinarpg-item@1.14.0:
     resolution: {integrity: sha512-udQHYGJ05klFe8Kkc0TOmwoXj5Xl1ZPgHVoMbGUAFB9exN4TFxEa1A39vkSYhxP5Et9PNufQQvFBFVom0nXikA==}
 
   prismarine-nbt@2.2.1:
@@ -7514,8 +7514,8 @@ packages:
   prismarine-physics@1.8.0:
     resolution: {integrity: sha512-gbM+S+bmVtOKVv+Z0WGaHMeEeBHISIDsRDRlv8sr0dex3ZJRhuq8djA02CBreguXtI18ZKh6q3TSj2qDr45NHA==}
 
-  prismarine-provider-anvil@https://codeload.github.com/zardoy/prismarine-provider-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699:
-    resolution: {tarball: https://codeload.github.com/zardoy/prismarine-provider-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699}
+  reinarpg-anvil@https://codeload.github.com/zardoy/reinarpg-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699:
+    resolution: {tarball: https://codeload.github.com/zardoy/reinarpg-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699}
     version: 2.8.0
 
   prismarine-realms@1.3.2:
@@ -7535,8 +7535,8 @@ packages:
   prismarine-windows@2.9.0:
     resolution: {integrity: sha512-fm4kOLjGFPov7TEJRmXHoiPabxIQrG36r2mDjlNxfkcLfMHFb3/1ML6mp4iRQa7wL0GK4DIAyiBqCWoeWDxARg==}
 
-  prismarine-world@https://codeload.github.com/zardoy/prismarine-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7:
-    resolution: {tarball: https://codeload.github.com/zardoy/prismarine-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7}
+  reinarpg-world@https://codeload.github.com/zardoy/reinarpg-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7:
+    resolution: {tarball: https://codeload.github.com/zardoy/reinarpg-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7}
     version: 3.6.3
     engines: {node: '>=8.0.0'}
 
@@ -11514,25 +11514,25 @@ snapshots:
       rimraf: 3.0.2
     optional: true
 
-  '@nxg-org/mineflayer-auto-jump@0.7.12':
+  '@nxg-org/reinarpg-bot-auto-jump@0.7.12':
     dependencies:
-      '@nxg-org/mineflayer-physics-util': 1.5.8
+      '@nxg-org/reinarpg-bot-physics-util': 1.5.8
       strict-event-emitter-types: 2.0.0
 
-  '@nxg-org/mineflayer-physics-util@1.5.8':
+  '@nxg-org/reinarpg-bot-physics-util@1.5.8':
     dependencies:
-      '@nxg-org/mineflayer-util-plugin': 1.8.3
+      '@nxg-org/reinarpg-bot-util-plugin': 1.8.3
 
-  '@nxg-org/mineflayer-tracker@1.2.3':
+  '@nxg-org/reinarpg-bot-tracker@1.2.3':
     dependencies:
-      '@nxg-org/mineflayer-trajectories': 1.1.1
-      '@nxg-org/mineflayer-util-plugin': 1.8.3
+      '@nxg-org/reinarpg-bot-trajectories': 1.1.1
+      '@nxg-org/reinarpg-bot-util-plugin': 1.8.3
 
-  '@nxg-org/mineflayer-trajectories@1.1.1':
+  '@nxg-org/reinarpg-bot-trajectories@1.1.1':
     dependencies:
-      '@nxg-org/mineflayer-util-plugin': 1.8.3
+      '@nxg-org/reinarpg-bot-util-plugin': 1.8.3
 
-  '@nxg-org/mineflayer-util-plugin@1.8.3': {}
+  '@nxg-org/reinarpg-bot-util-plugin@1.8.3': {}
 
   '@pkgjs/parseargs@0.11.0':
     optional: true
@@ -13381,13 +13381,13 @@ snapshots:
       mkdirp: 2.1.6
       node-gzip: 1.1.2
       node-rsa: 1.1.1
-      prismarine-chunk: https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
-      prismarine-entity: 2.3.1
-      prismarine-item: 1.14.0
+      reinarpg-chunk: https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
+      reinarpg-entity: 2.3.1
+      reinarpg-item: 1.14.0
       prismarine-nbt: 2.5.0
-      prismarine-provider-anvil: https://codeload.github.com/zardoy/prismarine-provider-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699(minecraft-data@3.65.0)
+      reinarpg-anvil: https://codeload.github.com/zardoy/reinarpg-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699(minecraft-data@3.65.0)
       prismarine-windows: 2.9.0
-      prismarine-world: https://codeload.github.com/zardoy/prismarine-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
+      reinarpg-world: https://codeload.github.com/zardoy/reinarpg-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
       rambda: 9.2.0
       random-seed: 0.3.0
       range: 0.0.3
@@ -14864,7 +14864,7 @@ snapshots:
   diamond-square@https://codeload.github.com/zardoy/diamond-square/tar.gz/4bbe28dcad35403abaa925055e91f601a61b9015:
     dependencies:
       minecraft-data: 3.65.0
-      prismarine-chunk: https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
+      reinarpg-chunk: https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
       prismarine-registry: 1.7.0
       random-seed: 0.3.0
       vec3: 0.1.8
@@ -17725,40 +17725,40 @@ snapshots:
       detect-collisions: 7.0.5
       vec3: 0.1.8
 
-  mineflayer-item-map-downloader@https://codeload.github.com/zardoy/mineflayer-item-map-downloader/tar.gz/642fd4f7023a98a96da4caf8f993f8e19361a1e7(patch_hash=bck55yjvd4wrgz46x7o4vfur5q)(encoding@0.1.13):
+  reinarpg-bot-item-map-downloader@https://codeload.github.com/zardoy/reinarpg-bot-item-map-downloader/tar.gz/642fd4f7023a98a96da4caf8f993f8e19361a1e7(patch_hash=bck55yjvd4wrgz46x7o4vfur5q)(encoding@0.1.13):
     dependencies:
-      mineflayer: 4.20.1(encoding@0.1.13)
+      reinarpg-bot: 4.20.1(encoding@0.1.13)
       sharp: 0.30.7
     transitivePeerDependencies:
       - encoding
       - supports-color
 
-  mineflayer-pathfinder@2.4.4:
+  reinarpg-bot-pathfinder@2.4.4:
     dependencies:
       minecraft-data: 3.65.0
-      prismarine-block: https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
-      prismarine-entity: 2.3.1
-      prismarine-item: 1.14.0
+      reinarpg-block: https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
+      reinarpg-entity: 2.3.1
+      reinarpg-item: 1.14.0
       prismarine-nbt: 2.2.1
       prismarine-physics: 1.8.0
       vec3: 0.1.8
 
-  mineflayer@4.20.1(encoding@0.1.13):
+  reinarpg-bot@4.20.1(encoding@0.1.13):
     dependencies:
       minecraft-data: 3.65.0
       minecraft-protocol: https://codeload.github.com/PrismarineJS/node-minecraft-protocol/tar.gz/7057ad979b416192ada235f2f4e3b5eb26af5fa1(patch_hash=7otpchsbv7hxsuis4rrrwdtbve)(encoding@0.1.13)
       prismarine-biome: 1.3.0(minecraft-data@3.65.0)(prismarine-registry@1.7.0)
-      prismarine-block: https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
+      reinarpg-block: https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
       prismarine-chat: 1.10.1
-      prismarine-chunk: https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
-      prismarine-entity: 2.3.1
-      prismarine-item: 1.14.0
+      reinarpg-chunk: https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
+      reinarpg-entity: 2.3.1
+      reinarpg-item: 1.14.0
       prismarine-nbt: 2.5.0
       prismarine-physics: 1.8.0
       prismarine-recipe: 1.3.1(prismarine-registry@1.7.0)
       prismarine-registry: 1.7.0
       prismarine-windows: 2.9.0
-      prismarine-world: https://codeload.github.com/zardoy/prismarine-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
+      reinarpg-world: https://codeload.github.com/zardoy/reinarpg-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
       protodef: 1.15.0
       typed-emitter: 1.4.0
       vec3: 0.1.8
@@ -17766,22 +17766,22 @@ snapshots:
       - encoding
       - supports-color
 
-  mineflayer@https://codeload.github.com/zardoy/mineflayer/tar.gz/c6755fc3758eeb3bbbb98479efe03b7935486247(encoding@0.1.13):
+  reinarpg-bot@https://codeload.github.com/zardoy/reinarpg-bot/tar.gz/c6755fc3758eeb3bbbb98479efe03b7935486247(encoding@0.1.13):
     dependencies:
       minecraft-data: 3.65.0
       minecraft-protocol: https://codeload.github.com/PrismarineJS/node-minecraft-protocol/tar.gz/7057ad979b416192ada235f2f4e3b5eb26af5fa1(patch_hash=7otpchsbv7hxsuis4rrrwdtbve)(encoding@0.1.13)
       prismarine-biome: 1.3.0(minecraft-data@3.65.0)(prismarine-registry@1.7.0)
-      prismarine-block: https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
+      reinarpg-block: https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
       prismarine-chat: 1.10.1
-      prismarine-chunk: https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
-      prismarine-entity: 2.3.1
-      prismarine-item: 1.14.0
+      reinarpg-chunk: https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
+      reinarpg-entity: 2.3.1
+      reinarpg-item: 1.14.0
       prismarine-nbt: 2.5.0
       prismarine-physics: 1.8.0
       prismarine-recipe: 1.3.1(prismarine-registry@1.7.0)
       prismarine-registry: 1.7.0
       prismarine-windows: 2.9.0
-      prismarine-world: https://codeload.github.com/zardoy/prismarine-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
+      reinarpg-world: https://codeload.github.com/zardoy/reinarpg-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
       protodef: 1.15.0
       typed-emitter: 1.4.0
       vec3: 0.1.8
@@ -18569,12 +18569,12 @@ snapshots:
       minecraft-data: 3.65.0
       prismarine-registry: 1.7.0
 
-  prismarine-block@https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819:
+  reinarpg-block@https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819:
     dependencies:
       minecraft-data: 3.65.0
       prismarine-biome: 1.3.0(minecraft-data@3.65.0)(prismarine-registry@1.7.0)
       prismarine-chat: 1.10.1
-      prismarine-item: 1.14.0
+      reinarpg-item: 1.14.0
       prismarine-nbt: 2.5.0
       prismarine-registry: 1.7.0
 
@@ -18584,10 +18584,10 @@ snapshots:
       prismarine-nbt: 2.5.0
       prismarine-registry: 1.7.0
 
-  prismarine-chunk@https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0):
+  reinarpg-chunk@https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0):
     dependencies:
       prismarine-biome: 1.3.0(minecraft-data@3.65.0)(prismarine-registry@1.7.0)
-      prismarine-block: https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
+      reinarpg-block: https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
       prismarine-nbt: 2.5.0
       prismarine-registry: 1.7.0
       smart-buffer: 4.2.0
@@ -18597,14 +18597,14 @@ snapshots:
     transitivePeerDependencies:
       - minecraft-data
 
-  prismarine-entity@2.3.1:
+  reinarpg-entity@2.3.1:
     dependencies:
       prismarine-chat: 1.10.1
-      prismarine-item: 1.14.0
+      reinarpg-item: 1.14.0
       prismarine-registry: 1.7.0
       vec3: 0.1.8
 
-  prismarine-item@1.14.0:
+  reinarpg-item@1.14.0:
     dependencies:
       prismarine-nbt: 2.5.0
       prismarine-registry: 1.7.0
@@ -18623,12 +18623,12 @@ snapshots:
       prismarine-nbt: 2.5.0
       vec3: 0.1.8
 
-  prismarine-provider-anvil@https://codeload.github.com/zardoy/prismarine-provider-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699(minecraft-data@3.65.0):
+  reinarpg-anvil@https://codeload.github.com/zardoy/reinarpg-anvil/tar.gz/a3f462dc81ded5b46e88e3442f99aadf35f7f699(minecraft-data@3.65.0):
     dependencies:
-      prismarine-block: https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
-      prismarine-chunk: https://codeload.github.com/zardoy/prismarine-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
+      reinarpg-block: https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
+      reinarpg-chunk: https://codeload.github.com/reinarpg/reinarpg-chunk/tar.gz/cea0b6c792d7dcbb69dfd20fa48be5fd60ce83ef(minecraft-data@3.65.0)
       prismarine-nbt: 2.5.0
-      prismarine-world: https://codeload.github.com/zardoy/prismarine-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
+      reinarpg-world: https://codeload.github.com/zardoy/reinarpg-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
       uint4: 0.1.2
       vec3: 0.1.8
     transitivePeerDependencies:
@@ -18654,18 +18654,18 @@ snapshots:
   prismarine-schematic@1.2.3:
     dependencies:
       minecraft-data: 3.65.0
-      prismarine-block: https://codeload.github.com/zardoy/prismarine-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
+      reinarpg-block: https://codeload.github.com/zardoy/reinarpg-block/tar.gz/a69b66ab1e4be6b67f25a5a6db15e0ad39e11819
       prismarine-nbt: 2.2.1
-      prismarine-world: https://codeload.github.com/zardoy/prismarine-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
+      reinarpg-world: https://codeload.github.com/zardoy/reinarpg-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7
       vec3: 0.1.8
 
   prismarine-windows@2.9.0:
     dependencies:
-      prismarine-item: 1.14.0
+      reinarpg-item: 1.14.0
       prismarine-registry: 1.7.0
       typed-emitter: 2.1.0
 
-  prismarine-world@https://codeload.github.com/zardoy/prismarine-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7:
+  reinarpg-world@https://codeload.github.com/zardoy/reinarpg-world/tar.gz/187a87f6d71cba12881a7bbaa510ed9085bf6da7:
     dependencies:
       vec3: 0.1.8
 

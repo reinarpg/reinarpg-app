@@ -167,7 +167,7 @@ export const setRenderDistance = () => {
   let renderDistance = miscUiState.singleplayer ? singleplayerRenderDistance : multiplayerRenderDistance
   const zeroRenderDistance = miscUiState.singleplayer && renderDistance === 0
   if (zeroRenderDistance) {
-    renderDistance = 1 // mineflayer limitation workaround
+    renderDistance = 1 // reinarpg-bot limitation workaround
   }
   bot.setSettings({
     viewDistance: renderDistance

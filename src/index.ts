@@ -16,8 +16,8 @@ import 'core-js/features/promise/with-resolvers'
 
 import './scaleInterface'
 import { initWithRenderer } from './topRightStats'
-import PrismarineBlock from 'prismarine-block'
-import PrismarineItem from 'prismarine-item'
+import PrismarineBlock from 'reinarpg-block'
+import PrismarineItem from 'reinarpg-item'
 
 import { options, watchValue } from './optionsStorage'
 import './reactUi'
@@ -29,9 +29,9 @@ import downloadAndOpenFile from './downloadAndOpenFile'
 
 import fs from 'fs'
 import net from 'net'
-import mineflayer from 'mineflayer'
+import reinarpg-bot from 'reinarpg-bot'
 import { WorldDataEmitter, Viewer } from 'prismarine-viewer/viewer'
-import pathfinder from 'mineflayer-pathfinder'
+import pathfinder from 'reinarpg-bot-pathfinder'
 import { Vec3 } from 'vec3'
 
 import worldInteractions from './worldInteractions'
@@ -314,7 +314,7 @@ async function connect (connectOptions: ConnectOptions) {
     renderWrapper.postRender = () => { }
     if (bot) {
       bot.end()
-      // ensure mineflayer plugins receive this event for cleanup
+      // ensure reinarpg-bot plugins receive this event for cleanup
       bot.emit('end', '')
       bot.removeAllListeners()
       bot._client.removeAllListeners()
@@ -426,15 +426,15 @@ async function connect (connectOptions: ConnectOptions) {
 
     if (singleplayer) {
       // SINGLEPLAYER EXPLAINER:
-      // Note 1: here we have custom sync communication between server Client (flying-squid) and game client (mineflayer)
+      // Note 1: here we have custom sync communication between server Client (flying-squid) and game client (reinarpg-bot)
       // Note 2: custom Server class is used which simplifies communication & Client creation on it's side
       // local server started
-      // mineflayer.createBot (see source def)
+      // reinarpg-bot.createBot (see source def)
       // bot._client = bot._client ?? mc.createClient(options) <-- mc-protocol package
       // tcpDns() skipped since we define connect option
       // in setProtocol: we emit 'connect' here below so in that file we send set_protocol and login_start (onLogin handler)
       // Client (class) of flying-squid (in server/login.js of mc-protocol): onLogin handler: skip most logic & go to loginClient() which assigns uuid and sends 'success' back to client (onLogin handler) and emits 'login' on the server (login.js in flying-squid handler)
-      // flying-squid: 'login' -> player.login -> now sends 'login' event to the client (handled in many plugins in mineflayer) -> then 'update_health' is sent which emits 'spawn' in mineflayer
+      // flying-squid: 'login' -> player.login -> now sends 'login' event to the client (handled in many plugins in reinarpg-bot) -> then 'update_health' is sent which emits 'spawn' in reinarpg-bot
 
       setLoadingScreenStatus('Starting local server')
       localServer = window.localServer = window.server = startLocalServer(serverOptions)
@@ -481,7 +481,7 @@ async function connect (connectOptions: ConnectOptions) {
       connectingServer: server.host
     }) : undefined
 
-    bot = mineflayer.createBot({
+    bot = reinarpg-bot.createBot({
       host: server.host,
       port: server.port ? +server.port : undefined,
       version: connectOptions.botVersion || false,

@@ -1,4 +1,4 @@
-// this should actually be moved to mineflayer / prismarine-viewer
+// this should actually be moved to reinarpg-bot / prismarine-viewer
 
 import { fromFormattedString, TextComponent } from '@xmcl/text-component'
 import type { IndexedData } from 'minecraft-data'
@@ -116,7 +116,7 @@ const blockToItemRemaps = {
   tripwire: 'tripwire_hook'
 }
 
-export const getItemFromBlock = (block: import('prismarine-block').Block) => {
+export const getItemFromBlock = (block: import('reinarpg-block').Block) => {
   const item = global.loadedData.itemsByName[blockToItemRemaps[block.name] ?? block.name]
   return item
 }

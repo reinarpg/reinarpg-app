@@ -5,7 +5,7 @@ import * as THREE from 'three'
 // wouldn't better to create atlas instead?
 import { Vec3 } from 'vec3'
 import { LineMaterial, Wireframe, LineSegmentsGeometry } from 'three-stdlib'
-import { Entity } from 'prismarine-entity'
+import { Entity } from 'reinarpg-entity'
 import destroyStage0 from '../assets/destroy_stage_0.png'
 import destroyStage1 from '../assets/destroy_stage_1.png'
 import destroyStage2 from '../assets/destroy_stage_2.png'
@@ -43,7 +43,7 @@ class WorldInteraction {
   lastButtons = [false, false, false]
   breakStartTime: number | undefined = 0
   lastDugBlock: Vec3 | null = null
-  cursorBlock: import('prismarine-block').Block | null = null
+  cursorBlock: import('reinarpg-block').Block | null = null
   blockBreakMesh: THREE.Mesh
   breakTextures: THREE.Texture[]
   lastDigged: number
@@ -163,7 +163,7 @@ class WorldInteraction {
   }
 
   activateEntity (entity: Entity) {
-    // mineflayer has completely wrong implementation of this action
+    // reinarpg-bot has completely wrong implementation of this action
     if (bot.supportFeature('armAnimationBeforeUse')) {
       bot.swingArm('right')
     }
@@ -321,7 +321,7 @@ class WorldInteraction {
     if ((!this.buttons[0] && this.lastButtons[0]) || cursorChanged) {
       try {
         bot.stopDigging() // this shouldnt throw anything...
-      } catch (e) { } // to be reworked in mineflayer, then remove the try here
+      } catch (e) { } // to be reworked in reinarpg-bot, then remove the try here
     }
     // We stopped breaking
     if ((!this.buttons[0] && this.lastButtons[0])) {
@@ -331,7 +331,7 @@ class WorldInteraction {
     }
 
     const onGround = bot.entity.onGround || bot.game.gameMode === 'creative'
-    this.prevOnGround ??= onGround // todo this should be fixed in mineflayer to involve correct calculations when this changes as this is very important when mining straight down // todo this should be fixed in mineflayer to involve correct calculations when this changes as this is very important when mining straight down // todo this should be fixed in mineflayer to involve correct calculations when this changes as this is very important when mining straight down
+    this.prevOnGround ??= onGround // todo this should be fixed in reinarpg-bot to involve correct calculations when this changes as this is very important when mining straight down // todo this should be fixed in reinarpg-bot to involve correct calculations when this changes as this is very important when mining straight down // todo this should be fixed in reinarpg-bot to involve correct calculations when this changes as this is very important when mining straight down
     // Start break
     // todo last check doesnt work as cursorChanged happens once (after that check is false)
     if (

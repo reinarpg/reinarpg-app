@@ -3,7 +3,7 @@ import './Crosshair.css'
 import { proxy, useSnapshot } from 'valtio'
 import SharedHudVars from './SharedHudVars'
 
-// todo move to mineflayer
+// todo move to reinarpg-bot
 export const itemBeingUsed = proxy({
   name: null as string | null,
   hand: 0 as 0 | 1
@@ -21,7 +21,7 @@ export default () => {
 
   useEffect(() => {
     bot.on('heldItemChanged' as any, () => {
-      const displayBar = (item: import('prismarine-item').Item | null) => {
+      const displayBar = (item: import('reinarpg-item').Item | null) => {
         const itemName = item?.name
         if (!itemName) return
         return loadedData.foodsArray.map((food) => food.name).includes(itemName) || itemName === 'bow' || itemName === 'shield' || itemName === 'crossbow'

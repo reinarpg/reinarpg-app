@@ -1,5 +1,5 @@
 import { useRef, useState, useMemo } from 'react'
-import { GameMode } from 'mineflayer'
+import { GameMode } from 'reinarpg-bot'
 import { armor } from './armorValues'
 import HealthBar from './HealthBar'
 import FoodBar from './FoodBar'

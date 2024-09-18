@@ -4,7 +4,7 @@
 import { EventEmitter } from 'events'
 import { generateSpiralMatrix, ViewRect } from 'flying-squid/dist/utils'
 import { Vec3 } from 'vec3'
-import { BotEvents } from 'mineflayer'
+import { BotEvents } from 'reinarpg-bot'
 import { getItemFromBlock } from '../../../src/botUtils'
 import { chunkPos } from './simpleUtils'
 
@@ -12,7 +12,7 @@ export type ChunkPosKey = string
 type ChunkPos = { x: number, z: number }
 
 /**
- * Usually connects to mineflayer bot and emits world data (chunks, entities)
+ * Usually connects to reinarpg-bot bot and emits world data (chunks, entities)
  * It's up to the consumer to serialize the data if needed
  */
 export class WorldDataEmitter extends EventEmitter {
@@ -141,7 +141,7 @@ export class WorldDataEmitter extends EventEmitter {
     }
   }
 
-  removeListenersFromBot (bot: import('mineflayer').Bot) {
+  removeListenersFromBot (bot: import('reinarpg-bot').Bot) {
     for (const [evt, listener] of Object.entries(this.eventListeners)) {
       bot.removeListener(evt as any, listener)
     }

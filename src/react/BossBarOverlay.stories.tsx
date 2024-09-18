@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react'
 
 import { ChatMessage } from 'prismarine-chat'
-import { BossBar } from 'mineflayer'
+import { BossBar } from 'reinarpg-bot'
 import BossBarOverlay from './BossBarOverlay'
 
 const meta: Meta<typeof BossBarOverlay> = {

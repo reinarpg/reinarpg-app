@@ -1,4 +1,4 @@
-// workaround for mineflayer
+// workaround for reinarpg-bot
 process.versions.node = '18.0.0'
 
 if (!navigator.getGamepads) {
