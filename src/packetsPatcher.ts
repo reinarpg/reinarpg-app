@@ -1,5 +1,5 @@
 // todo it should not be there, most likely it will be more automatically updated in the future
-// todo these fixes should be ported to mineflayer
+// todo these fixes should be ported to reinarpg-bot
 
 export default () => {
   customEvents.on('mineflayerBotCreated', () => {

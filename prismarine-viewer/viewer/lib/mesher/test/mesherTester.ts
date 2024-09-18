@@ -1,4 +1,4 @@
-import ChunkLoader, { PCChunk } from 'prismarine-chunk'
+import ChunkLoader, { PCChunk } from 'reinarpg-chunk'
 import { Vec3 } from 'vec3'
 import MinecraftData from 'minecraft-data'
 import blocksAtlasesJson from 'mc-assets/dist/blocksAtlases.json'

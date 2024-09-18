@@ -1,4 +1,4 @@
-import type { BossBar as BossBarTypeRaw } from 'mineflayer'
+import type { BossBar as BossBarTypeRaw } from 'reinarpg-bot'
 import { useState, useEffect } from 'react'
 import MessageFormattedString from './MessageFormattedString'
 import './BossBarOverlay.css'

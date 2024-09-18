@@ -32,7 +32,7 @@ export default () => {
       return
     }
     const currentSlot = bot.quickBarSlot
-    // mineflayer has wrong implementation of this action after 1.17.2
+    // reinarpg-bot has wrong implementation of this action after 1.17.2
     if (title === undefined) {
       bot._client.write('edit_book', {
         hand: currentSlot,

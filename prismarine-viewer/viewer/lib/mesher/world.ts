@@ -1,6 +1,6 @@
-import Chunks from 'prismarine-chunk'
+import Chunks from 'reinarpg-chunk'
 import mcData from 'minecraft-data'
-import { Block } from 'prismarine-block'
+import { Block } from 'reinarpg-block'
 import { Vec3 } from 'vec3'
 import { WorldBlockProvider } from 'mc-assets/dist/worldBlockProvider'
 import moreBlockDataGeneratedJson from '../moreBlockDataGenerated.json'
@@ -33,8 +33,8 @@ export type WorldBlock = Omit<Block, 'position'> & {
 
 export class World {
   config = defaultMesherConfig
-  Chunk: typeof import('prismarine-chunk/types/index').PCChunk
-  columns = {} as { [key: string]: import('prismarine-chunk/types/index').PCChunk }
+  Chunk: typeof import('reinarpg-chunk/types/index').PCChunk
+  columns = {} as { [key: string]: import('reinarpg-chunk/types/index').PCChunk }
   blockCache = {}
   biomeCache: { [id: number]: mcData.Biome }
   preflat: boolean

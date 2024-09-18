@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
-import { mapDownloader } from 'mineflayer-item-map-downloader/'
-import { setImageConverter } from 'mineflayer-item-map-downloader/lib/util'
+import { mapDownloader } from 'reinarpg-bot-item-map-downloader/'
+import { setImageConverter } from 'reinarpg-bot-item-map-downloader/lib/util'
 
 export default () => {
   const [dataUrl, setDataUrl] = useState<string | null | true>(null) // true means loading

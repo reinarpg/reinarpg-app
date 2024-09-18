@@ -1,5 +1,5 @@
 import { useState, useMemo } from 'react'
-import { GameMode } from 'mineflayer'
+import { GameMode } from 'reinarpg-bot'
 import XPBar from './XPBar'
 
 

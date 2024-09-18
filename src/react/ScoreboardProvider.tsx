@@ -28,7 +28,7 @@ export default function ScoreboardProvider () {
     bot.on('scoreboardPosition', () => {
       void Promise.resolve().then(() => {
         updateSidebarScoreboard()
-      }) // mineflayer bug: wait for the next tick to get the correct scoreboard position
+      }) // reinarpg-bot bug: wait for the next tick to get the correct scoreboard position
     })
   }, [])
 

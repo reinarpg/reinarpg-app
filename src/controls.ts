@@ -665,7 +665,7 @@ const selectItem = async () => {
   if (!block) return
   const itemId = getItemFromBlock(block)?.id
   if (!itemId) return
-  const Item = require('prismarine-item')(bot.version)
+  const Item = require('reinarpg-item')(bot.version)
   const item = new Item(itemId, 1, 0)
   await bot.creative.setInventorySlot(bot.inventory.hotbarStart + bot.quickBarSlot, item)
   bot.updateHeldItem()

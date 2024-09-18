@@ -7,10 +7,10 @@ index 2a7aff75a9f1c7fe4eebb657002e58f4581dad0e..cd3490983353336efeb13f24f0af69c6
    "author": "Ic3Tank",
    "license": "ISC",
 -  "dependencies": {
--    "mineflayer": "^4.3.0",
+-    "reinarpg-bot": "^4.3.0",
 -    "sharp": "^0.30.6"
 -  },
 +  "dependencies": {},
    "devDependencies": {
-     "mineflayer-item-map-downloader": "file:./"
+     "reinarpg-bot-item-map-downloader": "file:./"
    }

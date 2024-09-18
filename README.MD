@@ -41,7 +41,7 @@ Whatever offline mode you used (zip, folder, just single player), you can always
 ### Servers
 
 You can play almost on any Java server, vanilla servers are fully supported.
-See the [Mineflayer](https://github.com/PrismarineJS/mineflayer) repo for the list of supported versions (should support majority of versions).
+See the [Mineflayer](https://github.com/reinarpg/reinarpg-bot) repo for the list of supported versions (should support majority of versions).
 There is a builtin proxy, but you can also host your one! Just clone the repo, run `pnpm i` (following CONTRIBUTING.MD) and run `pnpm prod-start`, then you can specify `http://localhost:8080` in the proxy field.
 
 Proxy servers are used to connect to Minecraft servers which use TCP protocol. When you connect connect to a server with a proxy, websocket connection is created between you (browser client) and the proxy server located in Europe, then the proxy connects to the Minecraft server and sends the data to the client (you) without any packet deserialization to avoid any additional delays. That said all the Minecraft protocol packets are processed by the client, right in your browser.
@@ -175,9 +175,9 @@ General:
 
 ### Notable Things that Power this Project
 
-- [Mineflayer](https://github.com/PrismarineJS/mineflayer) - Handles all client-side communications with the server (including the builtin one) - forked
+- [Mineflayer](https://github.com/reinarpg/reinarpg-bot) - Handles all client-side communications with the server (including the builtin one) - forked
 - [Forked Flying Squid (Space Squid)](https://github.com/zardoy/space-squid) - The builtin offline server that makes single player & P2P possible!
-- [Prismarine Provider Anvil](https://github.com/PrismarineJS/prismarine-provider-anvil) - Handles world loading (region format)
+- [Prismarine Provider Anvil](https://github.com/reinarpg/reinarpg-anvil) - Handles world loading (region format)
 - [Prismarine Physics](https://github.com/PrismarineJS/prismarine-physics) - Does all the physics calculations
 - [Minecraft Protocol](https://github.com/PrismarineJS/node-minecraft-protocol) - Makes connections to servers possible
 - [Peer.js](https://peerjs.com/) - P2P networking (when you open to wan)

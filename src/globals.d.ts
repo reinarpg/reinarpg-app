@@ -1,9 +1,9 @@
 /// <reference types="wicg-file-system-access" />
 
 // todo make optional
-declare const bot: Omit<import('mineflayer').Bot, 'world' | '_client'> & {
-  world: Omit<import('prismarine-world').world.WorldSync, 'getBlock'> & {
-    getBlock: (pos: import('vec3').Vec3) => import('prismarine-block').Block | null
+declare const bot: Omit<import('reinarpg-bot').Bot, 'world' | '_client'> & {
+  world: Omit<import('reinarpg-world').world.WorldSync, 'getBlock'> & {
+    getBlock: (pos: import('vec3').Vec3) => import('reinarpg-block').Block | null
   }
   _client: Omit<import('minecraft-protocol').Client, 'on'> & {
     write: typeof import('./generatedClientPackets').clientWrite

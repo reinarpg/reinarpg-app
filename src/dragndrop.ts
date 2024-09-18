@@ -1,7 +1,7 @@
 import { promisify } from 'util'
 import fs from 'fs'
 import * as nbt from 'prismarine-nbt'
-import RegionFile from 'prismarine-provider-anvil/src/region'
+import RegionFile from 'reinarpg-anvil/src/region'
 import { versions } from 'minecraft-data'
 import { openWorldDirectory, openWorldZip } from './browserfs'
 import { isGameActive } from './globalState'

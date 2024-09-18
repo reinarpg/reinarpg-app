@@ -1272,7 +1272,7 @@ for (const [name, data] of Object.entries(moreGeneratedBlocks.natural_blocks)) {
   descriptionGenerators.set([name], description)
 }
 
-export const getItemDescription = (item: import('prismarine-item').Item) => {
+export const getItemDescription = (item: import('reinarpg-item').Item) => {
   const { name } = item
   let result: string | ((name: string) => string) = ''
   for (const [names, description] of descriptionGenerators) {

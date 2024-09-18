@@ -1,6 +1,6 @@
 /* eslint-disable @stylistic/function-call-argument-newline */
 import { Vec3 } from 'vec3'
-import { Block } from 'prismarine-block'
+import { Block } from 'reinarpg-block'
 import { IndexedData } from 'minecraft-data'
 import * as THREE from 'three'
 import { BlockModelPartsResolved } from './world'

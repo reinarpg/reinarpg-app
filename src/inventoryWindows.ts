@@ -7,7 +7,7 @@ import { flat, fromFormattedString } from '@xmcl/text-component'
 import mojangson from 'mojangson'
 import nbt from 'prismarine-nbt'
 import { splitEvery, equals } from 'rambda'
-import PItem, { Item } from 'prismarine-item'
+import PItem, { Item } from 'reinarpg-item'
 import { ItemsRenderer } from 'mc-assets/dist/itemsRenderer'
 import { versionToNumber } from 'prismarine-viewer/viewer/prepare/utils'
 import { getRenamedData } from 'flying-squid/dist/blockRenames'
@@ -159,7 +159,7 @@ const getImage = ({ path = undefined as string | undefined, texture = undefined 
   return loadedImagesCache.get(loadPath)
 }
 
-type RenderSlot = Pick<import('prismarine-item').Item, 'name' | 'displayName' | 'durabilityUsed' | 'maxDurability' | 'enchants'>
+type RenderSlot = Pick<import('reinarpg-item').Item, 'name' | 'displayName' | 'durabilityUsed' | 'maxDurability' | 'enchants'>
 const renderSlot = (slot: RenderSlot, skipBlock = false): {
   texture: string,
   blockData?: Record<string, { slice, path }>,
@@ -197,7 +197,7 @@ type PossibleItemProps = {
   Damage?: number
   display?: { Name?: JsonString } // {"text":"Knife","color":"white","italic":"true"}
 }
-export const getItemNameRaw = (item: Pick<import('prismarine-item').Item, 'nbt'> | null) => {
+export const getItemNameRaw = (item: Pick<import('reinarpg-item').Item, 'nbt'> | null) => {
   if (!item?.nbt) return
   const itemNbt: PossibleItemProps = nbt.simplify(item.nbt)
   const customName = itemNbt.display?.Name

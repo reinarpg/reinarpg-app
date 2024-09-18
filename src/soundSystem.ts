@@ -2,7 +2,7 @@ import { subscribeKey } from 'valtio/utils'
 import { Vec3 } from 'vec3'
 import { versionToMajor, versionToNumber, versionsMapToMajor } from 'prismarine-viewer/viewer/prepare/utils'
 import { loadScript } from 'prismarine-viewer/viewer/lib/utils'
-import type { Block } from 'prismarine-block'
+import type { Block } from 'reinarpg-block'
 import { miscUiState } from './globalState'
 import { options } from './optionsStorage'
 import { loadOrPlaySound } from './basicSounds'
@@ -73,7 +73,7 @@ subscribeKey(miscUiState, 'gameLoaded', async () => {
     if (soundKey === undefined) return
     await playGeneralSound(soundKey, position, volume, pitch)
   })
-  // workaround as mineflayer doesn't support soundEvent
+  // workaround as reinarpg-bot doesn't support soundEvent
   bot._client.on('sound_effect', async (packet) => {
     const soundResource = packet['soundEvent']?.resource as string | undefined
     if (packet.soundId !== 0 || !soundResource) return
