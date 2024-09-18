@@ -1,7 +1,7 @@
 // this should actually be moved to reinarpg-bot / prismarine-viewer
 
 import { fromFormattedString, TextComponent } from '@xmcl/text-component'
-import type { IndexedData } from 'minecraft-data'
+import type { IndexedData } from 'reinarpg-data'
 
 export type MessageFormatPart = Pick<TextComponent, 'hoverEvent' | 'clickEvent'> & {
   text: string

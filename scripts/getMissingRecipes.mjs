@@ -1,6 +1,6 @@
 //@ts-check
 // tsx ./scripts/getMissingRecipes.mjs
-import MinecraftData from 'minecraft-data'
+import MinecraftData from 'reinarpg-data'
 import supportedVersions from '../src/supportedVersions.mjs'
 import fs from 'fs'
 

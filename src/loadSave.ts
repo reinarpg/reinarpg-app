@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import * as nbt from 'prismarine-nbt'
+import * as nbt from 'reinarpg-nbt'
 import { proxy } from 'valtio'
 import { gzip } from 'node-gzip'
 import { versionToNumber } from 'prismarine-viewer/viewer/prepare/utils'

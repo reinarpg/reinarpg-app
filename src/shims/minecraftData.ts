@@ -22,7 +22,7 @@ const optimizedDataResolver = customResolver()
 window._MC_DATA_RESOLVER = optimizedDataResolver
 window._LOAD_MC_DATA = async () => {
   if (optimizedDataResolver.resolvedData) return
-  optimizedDataResolver.resolve(await import('../../generated/minecraft-data-optimized.json'))
+  optimizedDataResolver.resolve(await import('../../generated/reinarpg-data-optimized.json'))
 }
 
 // 30 seconds

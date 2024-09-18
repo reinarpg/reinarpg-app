@@ -1,4 +1,4 @@
-import { supportedVersions } from 'minecraft-data'
+import { supportedVersions } from 'reinarpg-data'
 
 const ignoredVersionsRegex = /(^0\.30c$)|w|-pre|-rc/
 

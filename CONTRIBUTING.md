@@ -77,7 +77,7 @@ Start them with `pnpm test-unit`.
 
 You can get a description of packets for the latest protocol version from <https://wiki.vg/Protocol> and for previous protocol versions from <https://wiki.vg/Protocol_version_numbers> (look for *Page* links that have *Protocol* in URL).
 
-Also there are [src/generatedClientPackets.ts](src/generatedClientPackets.ts) and [src/generatedServerPackets.ts](src/generatedServerPackets.ts) files that have definitions of packets that come from the server and the client respectively. These files are generated from the protocol files. Protocol, blocks info and other data go from <https://github.com/prismarineJS/minecraft-data> repository.
+Also there are [src/generatedClientPackets.ts](src/generatedClientPackets.ts) and [src/generatedServerPackets.ts](src/generatedServerPackets.ts) files that have definitions of packets that come from the server and the client respectively. These files are generated from the protocol files. Protocol, blocks info and other data go from <https://github.com/prismarineJS/reinarpg-data> repository.
 
 ## A few other notes
 

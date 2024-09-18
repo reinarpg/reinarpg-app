@@ -1,6 +1,6 @@
 import ChunkLoader, { PCChunk } from 'reinarpg-chunk'
 import { Vec3 } from 'vec3'
-import MinecraftData from 'minecraft-data'
+import MinecraftData from 'reinarpg-data'
 import blocksAtlasesJson from 'mc-assets/dist/blocksAtlases.json'
 import { World as MesherWorld } from '../world'
 import { setBlockStatesData, getSectionGeometry } from '../models'

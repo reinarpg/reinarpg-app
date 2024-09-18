@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import minecraftData from 'minecraft-data'
+import minecraftData from 'reinarpg-data'
 
 const lastVersion = minecraftData.versions.pc[0]
 // console.log('last proto ver', lastVersion.minecraftVersion)

@@ -9,7 +9,7 @@ const __dirname = dirname(fileURLToPath(new URL(import.meta.url)))
 /** @type {import('esbuild').Plugin[]} */
 const mesherSharedPlugins = [
   {
-    name: 'minecraft-data',
+    name: 'reinarpg-data',
     setup (build) {
       build.onLoad({
         filter: /data[\/\\]pc[\/\\]common[\/\\]legacy.json$/,

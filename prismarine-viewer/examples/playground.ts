@@ -10,7 +10,7 @@ import blockstatesModels from 'mc-assets/dist/blockStatesModels.json'
 
 //@ts-expect-error
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js'
-import { IndexedData } from 'minecraft-data'
+import { IndexedData } from 'reinarpg-data'
 import { loadScript } from '../viewer/lib/utils'
 import { TWEEN_DURATION } from '../viewer/lib/entities'
 import { EntityMesh } from '../viewer/lib/entity/EntityMesh'
@@ -82,7 +82,7 @@ async function main () {
   //   }
   // }
 
-  const mcData: IndexedData = require('minecraft-data')(version)
+  const mcData: IndexedData = require('reinarpg-data')(version)
   window['loadedData'] = mcData
 
   gui.add(params, 'version', globalThis.includedVersions)
@@ -110,7 +110,7 @@ async function main () {
 
   const World = WorldLoader(version)
 
-  // const diamondSquare = require('diamond-square')({ version, seed: Math.floor(Math.random() * Math.pow(2, 31)) })
+  // const diamondSquare = require('reinarpg-square')({ version, seed: Math.floor(Math.random() * Math.pow(2, 31)) })
 
   //@ts-expect-error
   const chunk1 = new Chunk()

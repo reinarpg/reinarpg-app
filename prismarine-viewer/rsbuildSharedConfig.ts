@@ -69,12 +69,12 @@ export const rspackViewerConfig = (config, { appendPlugins, addRules, rspack }: 
         let absolute: string
         const request = resource.request.replaceAll('\\', '/')
         absolute = path.join(resource.context, request).replaceAll('\\', '/')
-        if (request.includes('minecraft-data/data/pc/1.')) {
+        if (request.includes('reinarpg-data/data/pc/1.')) {
             console.log('Error: incompatible resource', request, resource.contextInfo.issuer)
             process.exit(1)
             // throw new Error(`${resource.request} was requested by ${resource.contextInfo.issuer}`)
         }
-        if (absolute.endsWith('/minecraft-data/data.js')) {
+        if (absolute.endsWith('/reinarpg-data/data.js')) {
             resource.request = path.join(__dirname, `../src/shims/minecraftData.ts`)
         }
     }))

@@ -1,5 +1,5 @@
 import { versionToNumber } from 'prismarine-viewer/viewer/prepare/utils'
-import nbt from 'prismarine-nbt'
+import nbt from 'reinarpg-nbt'
 import { useEffect, useState } from 'react'
 import { useSnapshot } from 'valtio'
 import mojangson from 'mojangson'

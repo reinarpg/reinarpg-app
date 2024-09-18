@@ -1,7 +1,7 @@
 /* eslint-disable @stylistic/function-call-argument-newline */
 import { Vec3 } from 'vec3'
 import { Block } from 'reinarpg-block'
-import { IndexedData } from 'minecraft-data'
+import { IndexedData } from 'reinarpg-data'
 import * as THREE from 'three'
 import { BlockModelPartsResolved } from './world'
 import { BlockElement, buildRotationMatrix, elemFaces, matmul3, matmulmat3, vecadd3, vecsub3 } from './modelsGeometryCommon'
