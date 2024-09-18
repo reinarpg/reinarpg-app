@@ -1,17 +1,17 @@
 import assert from 'assert'
 import JsonOptimizer from '../src/optimizeJson';
 import fs from 'fs'
-import minecraftData from 'minecraft-data'
+import minecraftData from 'reinarpg-data'
 
-const json = JSON.parse(fs.readFileSync('./generated/minecraft-data-optimized.json', 'utf8'))
+const json = JSON.parse(fs.readFileSync('./generated/reinarpg-data-optimized.json', 'utf8'))
 
-const dataPaths = require('minecraft-data/minecraft-data/data/dataPaths.json')
+const dataPaths = require('reinarpg-data/reinarpg-data/data/dataPaths.json')
 
 const validateData = (ver, type) => {
   const target = JsonOptimizer.restoreData(structuredClone(json[type]), ver)
   const arrKey = json[type].arrKey
   const originalPath = dataPaths.pc[ver][type]
-  const original = require(`minecraft-data/minecraft-data/data/${originalPath}/${type}.json`)
+  const original = require(`reinarpg-data/reinarpg-data/data/${originalPath}/${type}.json`)
   if (arrKey) {
     const originalKeys = original.map(a => JsonOptimizer.getByArrKey(a, arrKey)) as string[]
     for (const [i, item] of originalKeys.entries()) {

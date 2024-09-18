@@ -1,5 +1,5 @@
 import { CustomWorld } from 'flying-squid/dist/lib/modules/world'
-import { IndexedData } from 'minecraft-data'
+import { IndexedData } from 'reinarpg-data'
 import { MesherConfig } from '../../viewer/lib/mesher/shared'
 
 type SetupParams = {}

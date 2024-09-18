@@ -1,5 +1,5 @@
 import Chunks from 'reinarpg-chunk'
-import mcData from 'minecraft-data'
+import mcData from 'reinarpg-data'
 import { Block } from 'reinarpg-block'
 import { Vec3 } from 'vec3'
 import { WorldBlockProvider } from 'mc-assets/dist/worldBlockProvider'

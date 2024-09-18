@@ -1,5 +1,5 @@
 import { test, expect } from 'vitest'
-import mcData from 'minecraft-data'
+import mcData from 'reinarpg-data'
 import { formatMessage } from './botUtils'
 
 //@ts-expect-error

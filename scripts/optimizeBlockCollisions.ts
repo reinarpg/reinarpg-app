@@ -43,7 +43,7 @@ const processData = (data: Shapes) => {
 }
 
 for (const version of [...supportedVersions].reverse()) {
-  const dataPath = join(require.resolve('minecraft-data'), '../minecraft-data/data/pc', version, 'blockCollisionShapes.json')
+  const dataPath = join(require.resolve('reinarpg-data'), '../reinarpg-data/data/pc', version, 'blockCollisionShapes.json')
   if (fs.existsSync(dataPath)) {
     console.log('using blockCollisionShapes of version', version)
     const data = JSON.parse(fs.readFileSync(dataPath, 'utf8'))
@@ -55,4 +55,4 @@ for (const version of [...supportedVersions].reverse()) {
   }
 }
 
-// const path = './node_modules/.pnpm/minecraft-data@3.45.0/node_modules/minecraft-data/minecraft-data/data/pc/1.19/blockCollisionShapes.json'
+// const path = './node_modules/.pnpm/reinarpg-data@3.45.0/node_modules/reinarpg-data/reinarpg-data/data/pc/1.19/blockCollisionShapes.json'

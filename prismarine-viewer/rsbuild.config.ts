@@ -7,7 +7,7 @@ import { pluginNodePolyfill } from '@rsbuild/plugin-node-polyfill';
 import fs from 'fs'
 import { appAndRendererSharedConfig, rspackViewerConfig } from './rsbuildSharedConfig';
 
-const mcDataPath = join(__dirname, '../generated/minecraft-data-optimized.json')
+const mcDataPath = join(__dirname, '../generated/reinarpg-data-optimized.json')
 
 if (!fs.existsSync(mcDataPath)) {
     childProcess.execSync('tsx ./scripts/makeOptimizedMcData.mjs', { stdio: 'inherit', cwd: path.join(__dirname, '..') })

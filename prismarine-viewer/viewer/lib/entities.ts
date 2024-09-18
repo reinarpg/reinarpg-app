@@ -1,6 +1,6 @@
 //@ts-check
 import EventEmitter from 'events'
-import nbt from 'prismarine-nbt'
+import nbt from 'reinarpg-nbt'
 import * as TWEEN from '@tweenjs/tween.js'
 import * as THREE from 'three'
 import { PlayerObject, PlayerAnimation } from 'skinview3d'

@@ -1,6 +1,6 @@
 import * as THREE from 'three'
 import { Vec3 } from 'vec3'
-import nbt from 'prismarine-nbt'
+import nbt from 'reinarpg-nbt'
 import PrismarineChatLoader from 'prismarine-chat'
 import * as tweenJs from '@tweenjs/tween.js'
 import { BloomPass, RenderPass, UnrealBloomPass, EffectComposer, WaterPass, GlitchPass } from 'three-stdlib'

@@ -1,4 +1,4 @@
-import minecraftData from 'minecraft-data'
+import minecraftData from 'reinarpg-data'
 import fs from 'fs'
 
 const data = minecraftData('1.20.1')

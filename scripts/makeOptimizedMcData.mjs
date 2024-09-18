@@ -8,7 +8,7 @@ import { gzipSizeFromFileSync } from 'gzip-size'
 import fs from 'fs'
 import  {default as _JsonOptimizer}  from '../src/optimizeJson'
 import { gzipSync } from 'zlib';
-import MinecraftData from 'minecraft-data'
+import MinecraftData from 'reinarpg-data'
 import MCProtocol from 'minecraft-protocol'
 
 /** @type {typeof _JsonOptimizer} */
@@ -19,7 +19,7 @@ const JsonOptimizer = _JsonOptimizer.default
 
 const require = Module.createRequire(import.meta.url)
 
-const dataPaths = require('minecraft-data/minecraft-data/data/dataPaths.json')
+const dataPaths = require('reinarpg-data/reinarpg-data/data/dataPaths.json')
 
 function toMajor (version) {
   const [a, b] = (version + '').split('.')
@@ -132,7 +132,7 @@ const dataTypeBundling = {
 }
 
 const notBundling = [...dataTypes.keys()].filter(x => !Object.keys(dataTypeBundling).includes(x))
-console.log("Not bundling minecraft-data data:", notBundling)
+console.log("Not bundling reinarpg-data data:", notBundling)
 
 let previousData = {}
 // /** @type {Record<string, JsonOptimizer>} */
@@ -149,8 +149,8 @@ for (const [i, [version, dataSet]] of versionsArr.reverse().entries()) {
       // contents += `      get ${dataType} () { return window.globalGetCollisionShapes?.("${version}") },\n`
       continue
     }
-    const loc = `minecraft-data/data/${dataPath}/`
-    const dataPathAbsolute = require.resolve(`minecraft-data/${loc}${dataType}`)
+    const loc = `reinarpg-data/data/${dataPath}/`
+    const dataPathAbsolute = require.resolve(`reinarpg-data/${loc}${dataType}`)
     // const data = fs.readFileSync(dataPathAbsolute, 'utf8')
     const dataRaw = require(dataPathAbsolute)
     let injectCode = ''
@@ -188,7 +188,7 @@ const sources = Object.fromEntries(Object.entries(diffSources).map(x => {
   return [x[0], data]
 }))
 Object.assign(sources, rawDataVersions)
-sources.versionKey = require('minecraft-data/package.json').version
+sources.versionKey = require('reinarpg-data/package.json').version
 
 const totalSize = Object.values(sizePerDataType).reduce((acc, val) => acc + val, 0)
 console.log('total size (mb)', totalSize / 1024 / 1024)
@@ -207,7 +207,7 @@ function compressToBase64(input) {
   return buffer.toString('base64');
 }
 
-const filePath = './generated/minecraft-data-optimized.json'
+const filePath = './generated/reinarpg-data-optimized.json'
 fs.writeFileSync(filePath, JSON.stringify(sources), 'utf8')
 if (compressedOutput) {
   const minizedCompressed = compressToBase64(fs.readFileSync(filePath))
