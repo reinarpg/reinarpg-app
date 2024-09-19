@@ -148,7 +148,7 @@
     "os-browserify": "^0.3.0",
     "path-browserify": "^1.0.1",
     "path-exists-cli": "^2.0.0",
-    "prismarine-viewer": "link:prismarine-viewer",
+    "prismarine-viewer": "file:prismarine-viewer",
     "process": "github:PrismarineJS/node-process",
     "rimraf": "^5.0.1",
     "storybook": "^7.4.6",
