@@ -1,5 +1,5 @@
 module.exports = {
-  'motd': 'A Minecraft Server \nRunning flying-squid',
+  'motd': 'A Minecraft Server \nRunning reinarpg-server',
   // host: '',
   // eslint-disable-next-line unicorn/numeric-separators-style
   'port': 25565,

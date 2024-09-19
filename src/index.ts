@@ -29,7 +29,7 @@ import downloadAndOpenFile from './downloadAndOpenFile'
 
 import fs from 'fs'
 import net from 'net'
-import reinarpg-bot from 'reinarpg-bot'
+import reinarpgbot from 'reinarpg-bot'
 import { WorldDataEmitter, Viewer } from 'prismarine-viewer/viewer'
 import pathfinder from 'mineflayer-pathfinder'
 import { Vec3 } from 'vec3'
@@ -314,7 +314,7 @@ async function connect (connectOptions: ConnectOptions) {
     renderWrapper.postRender = () => { }
     if (bot) {
       bot.end()
-      // ensure reinarpg-bot plugins receive this event for cleanup
+      // ensure reinarpgbot plugins receive this event for cleanup
       bot.emit('end', '')
       bot.removeAllListeners()
       bot._client.removeAllListeners()
@@ -426,15 +426,15 @@ async function connect (connectOptions: ConnectOptions) {
 
     if (singleplayer) {
       // SINGLEPLAYER EXPLAINER:
-      // Note 1: here we have custom sync communication between server Client (flying-squid) and game client (reinarpg-bot)
+      // Note 1: here we have custom sync communication between server Client (reinarpg-server) and game client (reinarpgbot)
       // Note 2: custom Server class is used which simplifies communication & Client creation on it's side
       // local server started
-      // reinarpg-bot.createBot (see source def)
+      // reinarpgbot.createBot (see source def)
       // bot._client = bot._client ?? mc.createClient(options) <-- mc-protocol package
       // tcpDns() skipped since we define connect option
       // in setProtocol: we emit 'connect' here below so in that file we send set_protocol and login_start (onLogin handler)
-      // Client (class) of flying-squid (in server/login.js of mc-protocol): onLogin handler: skip most logic & go to loginClient() which assigns uuid and sends 'success' back to client (onLogin handler) and emits 'login' on the server (login.js in flying-squid handler)
-      // flying-squid: 'login' -> player.login -> now sends 'login' event to the client (handled in many plugins in reinarpg-bot) -> then 'update_health' is sent which emits 'spawn' in reinarpg-bot
+      // Client (class) of reinarpg-server (in server/login.js of mc-protocol): onLogin handler: skip most logic & go to loginClient() which assigns uuid and sends 'success' back to client (onLogin handler) and emits 'login' on the server (login.js in reinarpg-server handler)
+      // reinarpg-server: 'login' -> player.login -> now sends 'login' event to the client (handled in many plugins in reinarpgbot) -> then 'update_health' is sent which emits 'spawn' in reinarpgbot
 
       setLoadingScreenStatus('Starting local server')
       localServer = window.localServer = window.server = startLocalServer(serverOptions)
@@ -481,7 +481,7 @@ async function connect (connectOptions: ConnectOptions) {
       connectingServer: server.host
     }) : undefined
 
-    bot = reinarpg-bot.createBot({
+    bot = reinarpgbot.createBot({
       host: server.host,
       port: server.port ? +server.port : undefined,
       version: connectOptions.botVersion || false,
@@ -559,7 +559,7 @@ async function connect (connectOptions: ConnectOptions) {
     window.bot = bot
     customEvents.emit('mineflayerBotCreated')
     if (singleplayer || p2pMultiplayer) {
-      // in case of p2pMultiplayer there is still flying-squid on the host side
+      // in case of p2pMultiplayer there is still reinarpg-server on the host side
       const _supportFeature = bot.supportFeature
       bot.supportFeature = ((feature) => {
         if (unsupportedLocalServerFeatures.includes(feature)) {

@@ -2,7 +2,7 @@
 
 // todo refactor into its own commons module
 import { EventEmitter } from 'events'
-import { generateSpiralMatrix, ViewRect } from 'flying-squid/dist/utils'
+import { generateSpiralMatrix, ViewRect } from 'reinarpg-server/dist/utils'
 import { Vec3 } from 'vec3'
 import { BotEvents } from 'reinarpg-bot'
 import { getItemFromBlock } from '../../../src/botUtils'

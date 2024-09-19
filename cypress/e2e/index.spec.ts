@@ -38,7 +38,7 @@ it('Loads & renders singleplayer', () => {
   testWorldLoad()
 })
 
-it('Joins to local flying-squid server', () => {
+it('Joins to local reinarpg-server server', () => {
   visit('/?ip=localhost&version=1.16.1')
   window.localStorage.version = ''
   // todo replace with data-test

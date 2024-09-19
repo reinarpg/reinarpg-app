@@ -1,6 +1,6 @@
 //@ts-check
-import mcServer from 'flying-squid'
-import defaultOptions from 'flying-squid/config/default-settings.json' assert { type: 'json' }
+import mcServer from 'reinarpg-server'
+import defaultOptions from 'reinarpg-server/config/default-settings.json' assert { type: 'json' }
 
 /** @type {Options} */
 const serverOptions = {

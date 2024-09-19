@@ -1,6 +1,6 @@
 import { Entity } from 'reinarpg-entity'
 import { versionToNumber } from 'prismarine-viewer/viewer/prepare/utils'
-import tracker from '@nxg-org/reinarpg-bot-tracker'
+import tracker from '@nxg-org/mineflayer-tracker'
 import { loader as autoJumpPlugin } from '@nxg-org/mineflayer-auto-jump'
 import { subscribeKey } from 'valtio/utils'
 import { options, watchValue } from './optionsStorage'

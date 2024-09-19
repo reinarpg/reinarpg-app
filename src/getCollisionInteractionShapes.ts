@@ -1,4 +1,4 @@
-import { getRenamedData } from 'flying-squid/dist/blockRenames'
+import { getRenamedData } from 'reinarpg-server/dist/blockRenames'
 import outputInteractionShapesJson from './interactionShapesGenerated.json'
 import './getCollisionShapes'
 

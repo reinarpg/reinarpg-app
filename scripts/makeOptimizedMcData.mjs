@@ -19,7 +19,7 @@ const JsonOptimizer = _JsonOptimizer.default
 
 const require = Module.createRequire(import.meta.url)
 
-const dataPaths = require('reinarpg-data/reinarpg-data/data/dataPaths.json')
+const dataPaths = require('reinarpg-data/rpg-data/data/dataPaths.json')
 
 function toMajor (version) {
   const [a, b] = (version + '').split('.')
@@ -149,7 +149,7 @@ for (const [i, [version, dataSet]] of versionsArr.reverse().entries()) {
       // contents += `      get ${dataType} () { return window.globalGetCollisionShapes?.("${version}") },\n`
       continue
     }
-    const loc = `reinarpg-data/data/${dataPath}/`
+    const loc = `rpg-data/data/${dataPath}/`
     const dataPathAbsolute = require.resolve(`reinarpg-data/${loc}${dataType}`)
     // const data = fs.readFileSync(dataPathAbsolute, 'utf8')
     const dataRaw = require(dataPathAbsolute)

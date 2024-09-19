@@ -1,7 +1,7 @@
 import EventEmitter from 'events'
 import * as THREE from 'three'
 import { Vec3 } from 'vec3'
-import { generateSpiralMatrix } from 'flying-squid/dist/utils'
+import { generateSpiralMatrix } from 'reinarpg-server/dist/utils'
 import worldBlockProvider from 'mc-assets/dist/worldBlockProvider'
 import { Entities } from './entities'
 import { Primitives } from './primitives'

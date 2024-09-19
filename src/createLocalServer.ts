@@ -1,6 +1,6 @@
 import { LocalServer } from './customServer'
 
-const { createMCServer } = require('flying-squid/dist')
+const { createMCServer } = require('reinarpg-server/dist')
 
 export const startLocalServer = (serverOptions) => {
   const passOptions = { ...serverOptions, Server: LocalServer }
@@ -12,6 +12,6 @@ export const startLocalServer = (serverOptions) => {
   return server
 }
 
-// features that flying-squid doesn't support at all
-// todo move & generate in flying-squid
+// features that reinarpg-server doesn't support at all
+// todo move & generate in reinarpg-server
 export const unsupportedLocalServerFeatures = ['transactionPacketExists', 'teleportUsesOwnPacket']

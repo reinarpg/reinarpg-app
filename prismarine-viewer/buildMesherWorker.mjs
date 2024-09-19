@@ -98,7 +98,7 @@ const buildOptions = {
         }, () => {
           const data = {
             // todo always use latest
-            tints: 'require("reinarpg-data/reinarpg-data/data/pc/1.16.2/tints.json")'
+            tints: 'require("reinarpg-data/rpg-data/data/pc/1.16.2/tints.json")'
           }
           return {
             contents: `module.exports = {${Object.entries(data).map(([key, code]) => `${key}: ${code}`).join(', ')}}`,

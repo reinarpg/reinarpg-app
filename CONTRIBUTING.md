@@ -81,7 +81,7 @@ Also there are [src/generatedClientPackets.ts](src/generatedClientPackets.ts) an
 
 ## A few other notes
 
-- To link dependency locally e.g. flying-squid add this to `pnpm` > `overrides` of root package.json: `"flying-squid": "file:../space-squid",` (with some modules `pnpm link` also works)
+- To link dependency locally e.g. reinarpg-server add this to `pnpm` > `overrides` of root package.json: `"reinarpg-server": "file:../space-squid",` (with some modules `pnpm link` also works)
 
 - Press `Y` to reload application into the same world (server, local world or random singleplayer world)
 - To start React profiling disable `REACT_APP_PROFILING` code first.

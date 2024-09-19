@@ -15,7 +15,7 @@ let tintsData
 try {
   tintsData = require('esbuild-data').tints
 } catch (err) {
-  tintsData = require('reinarpg-data/reinarpg-data/data/pc/1.16.2/tints.json')
+  tintsData = require('reinarpg-data/rpg-data/data/pc/1.16.2/tints.json')
 }
 for (const key of Object.keys(tintsData)) {
   tints[key] = prepareTints(tintsData[key])

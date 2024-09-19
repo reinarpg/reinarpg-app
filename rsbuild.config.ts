@@ -16,9 +16,7 @@ import { appAndRendererSharedConfig } from './prismarine-viewer/rsbuildSharedCon
 try { require('./localSettings.js') } catch { }
 
 const execAsync = promisify(childProcess.exec)
-
 const buildingVersion = new Date().toISOString().split(':')[0]
-
 const dev = process.env.NODE_ENV === 'development'
 
 // base options are in ./prismarine-viewer/rsbuildSharedConfig.ts
@@ -39,9 +37,6 @@ const appConfig = defineConfig({
         entry: {
             index: './src/index.ts',
         },
-        // exclude: [
-        //     /.woff$/
-        // ],
         define: {
             'process.env.BUILD_VERSION': JSON.stringify(!dev ? buildingVersion : 'undefined'),
             'process.env.MAIN_MENU_LINKS': JSON.stringify(process.env.MAIN_MENU_LINKS),
@@ -51,10 +46,6 @@ const appConfig = defineConfig({
         },
     },
     server: {
-        // strictPort: true,
-        // publicDir: {
-        //     name: 'assets',
-        // },
         proxy: {
             '/api': 'http://localhost:8080',
         },
@@ -85,11 +76,7 @@ const appConfig = defineConfig({
                         configJson.defaultProxy = ':8080'
                     }
                     fs.writeFileSync('./dist/config.json', JSON.stringify(configJson), 'utf8')
-                    // childProcess.execSync('./scripts/prepareSounds.mjs', { stdio: 'inherit' })
-                    // childProcess.execSync('tsx ./scripts/genMcDataTypes.ts', { stdio: 'inherit' })
-                    // childProcess.execSync('tsx ./scripts/genPixelartTypes.ts', { stdio: 'inherit' })
                     if (fs.existsSync('./prismarine-viewer/dist/mesher.js') && dev) {
-                        // copy mesher
                         fs.copyFileSync('./prismarine-viewer/dist/mesher.js', './dist/mesher.js')
                     } else if (!dev) {
                         await execAsync('pnpm run build-mesher')
@@ -103,7 +90,6 @@ const appConfig = defineConfig({
                     })
                     build.onAfterBuild(async () => {
                         const { count, size, warnings } = await generateSW({
-                            // dontCacheBustURLsMatching: [new RegExp('...')],
                             globDirectory: 'dist',
                             skipWaiting: true,
                             clientsClaim: true,
@@ -117,12 +103,6 @@ const appConfig = defineConfig({
             },
         },
     ],
-    // performance: {
-    //     bundleAnalyze: {
-    //         analyzerMode: 'json',
-    //         reportFilename: 'report.json',
-    //     },
-    // },
 })
 
 export default mergeRsbuildConfig(

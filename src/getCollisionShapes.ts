@@ -1,4 +1,4 @@
-import { getRenamedData } from 'flying-squid/dist/blockRenames'
+import { getRenamedData } from 'reinarpg-server/dist/blockRenames'
 import collisionShapesInit from '../generated/latestBlockCollisionsShapes.json'
 
 // defining globally to be used in loaded data, not sure of better workaround

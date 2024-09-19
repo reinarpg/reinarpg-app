@@ -2,10 +2,10 @@ import { join } from 'path'
 import fs from 'fs'
 import { useEffect } from 'react'
 import { subscribe, useSnapshot } from 'valtio'
-import { usedServerPathsV1 } from 'flying-squid/dist/lib/modules/world'
+import { usedServerPathsV1 } from 'reinarpg-server/dist/lib/modules/world'
 import { openURL } from 'prismarine-viewer/viewer/lib/simpleUtils'
 import { Vec3 } from 'vec3'
-import { generateSpiralMatrix } from 'flying-squid/dist/utils'
+import { generateSpiralMatrix } from 'reinarpg-server/dist/utils'
 import { subscribeKey } from 'valtio/utils'
 import {
   activeModalStack,

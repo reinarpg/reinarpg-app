@@ -49,7 +49,7 @@ if (isProd) {
 }
 
 const numArg = process.argv.find(x => x.match(/^\d+$/))
-const port = (require.main === module ? numArg : undefined) || 8080
+const port = (require.main === module ? numArg : undefined) || 3001
 
 // Start the server
 const server =
